@@ -1,6 +1,6 @@
 {
   "name": "rhubarb-node",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.4",
   "description": "rhubarb lip sync with static ffmpeg",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,24 +10,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "typescript": "tsc",
-    "build": "copy-files-from-to && tsc"
+    "build": "copy-folder src/rhubarb dist/rhubarb  && tsc"
   },
   "keywords": [],
   "author": "Kauly",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.4.0",
-    "copy-files-from-to": "^3.11.0",
+    "copy-folder-util": "^1.1.4",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
     "ffmpeg-static": "^5.2.0"
-  },
-  "copyFiles": [
-    {
-      "from": "src/rhubarb",
-      "to": "dist/rhubarb"
-    }
-  ]
+  }
 }
