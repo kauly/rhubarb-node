@@ -44,7 +44,7 @@ function runCommand({
   const currentDir = process.cwd();
   const rhubarb = path.join(
     currentDir,
-    rhubarbPath || "node_modules/rhubarb-node/rhubarb/rhubarb"
+    rhubarbPath || "node_modules/rhubarb-node/dist/rhubarb/rhubarb"
   );
   const outputDir = path.join(currentDir, "tmp");
   const outputWav = path.join(outputDir, "output.wav");
