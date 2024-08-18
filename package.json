@@ -6,17 +6,25 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typescript": "tsc"
+    "typescript": "tsc",
+    "build": "copy-files-from-to && tsc"
   },
   "keywords": [],
   "author": "Kauly",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.4.0",
+    "copy-files-from-to": "^3.11.0",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
     "ffmpeg-static": "^5.2.0"
-  }
+  },
+  "copyFiles": [
+    {
+      "from": "src/rhubarb",
+      "to": "dist/rhubarb"
+    }
+  ]
 }
